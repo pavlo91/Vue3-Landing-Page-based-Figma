@@ -2,8 +2,7 @@
     <!-- <img src="../assets//images/bg-tablet-pattern.svg" alt="" class="absolute -right-40 -top-40 -z-50 lg:w-[40rem] xl:w-[51rem]"> -->
     <div class="flex my-10 xl:my-14 justify-content-center items-center px-5 md:px-10 lg:px-20 xl:px-40">
         <div class="flex mr-40 lg:gap-4 xl:gap-8">
-            <img src="../assets/images/swin_logo.svg" alt="Swin Logo">
-            <img src="../assets/images/Swin.svg" alt="Logo Letter">
+            <img src="../assets/images/swin-logo.svg" alt="Swin Logo">
         </div>
         <div class="lg:flex hidden lg:gap-6 xl:gap-10 navbar-text cursor-pointer">
             <p>Key Features</p>

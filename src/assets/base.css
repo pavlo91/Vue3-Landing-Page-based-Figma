@@ -23,3 +23,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sub-title {
+  color: var(--m-3-sys-dark-secondary, #B1CCC5);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 52px; /* 115.556% */
+}
+
+.solution-main-title {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.solution-description {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+  align-self: stretch;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+

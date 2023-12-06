@@ -3,6 +3,7 @@
     <Solution />
     <Benefits />
     <OnBoard />
+    
     <div class="text-center my-8 mb:my-12 lg:my-16 xl:my-20 px-5 md:px-10 lg:px-20 xl:px-40">
         <h4 class="text-primary-DarkBlue text font-bold mt-10 text-4xl md:text-[2.75rem] lg:text-4xl xl:text-[2.75rem] mb-32">What they’ve said</h4>
         <div class="grid grid-flow-col gap-10 mb-16 relative" id="slider" >
@@ -24,6 +25,9 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import MainButton from './MainButton.vue';
+import TitleComponent from './TitleComponent.vue';
+import SolutionItem from './SolutionItem.vue';
+
 import Slider from './Slider.vue';
 import Solution from './Solution.vue';
 import Benefits from './Benefits.vue';

@@ -19,16 +19,16 @@
     </div>
     <!-- Slider End -->
     <!-- Solgan Start -->
-    <div class="mt-20 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40">
+    <div class="mt-20 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 solution">
       <div class="lg:hidden">
           <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="w-[45rem]">
       </div>
-      <div class="lg:block hidden">
+      <div class="lg:block hidden solution-image">
           <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="mobile-1">
       </div>
       <!-- Slogan End -->
       <!-- Solution Start -->
-      <div class="max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start">
+      <div class="max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">
         <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions"/>
         <div class="mt-12">
             <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
@@ -39,28 +39,31 @@
     </div>
     <!-- Solution End -->
     <!-- Benefit Start -->
-    <div class="slogan-bg items-center py-20 relative overflow-hidden md:px-10 lg:px-20 xl:px-40">
+    <div class="slogan-bg py-20 benefit">
         <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
-        <div class="flex items-center items-space-beetween">
-            <div v-for="item in benefits" :key="item.bIconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
+        <div class="flex mt-12">
+            <div v-for="item in benefits" :key="item.bIconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5 benefit-text">
                 <BenefitItem :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
             </div>
         </div>
     </div>
     <!-- Benefit End -->
     <!-- Onboard Start -->
-    <div class="grid grid-flow-row benefits lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
-        <div>
-            <div v-for="item in onboards" :key="item.id" class="flex ml-5 lg:ml-0 lg:gap-5 mb-5">
-                <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" />
+    <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
+        <div class="onboard">
+            <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
+            <div class="mt-12">
+                <div v-for="item in onboards" :key="item.id" class="flex ml-5 lg:ml-0 lg:gap-5 mb-5">
+                    <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" />
+                </div>
             </div>
         </div>
         <!-- <img src="../assets/images/square-clover.png" alt="" class="absolute -z-50 lg:-left-[30rem] lg:top-3/4 trigger -right-[40rem] -top-3/4"> -->
         <div class="lg:block hidden">
-        <img src="../assets/images/imagen-steps.svg" alt="Squear Clover" class="mobile-groups1">
+            <img src="../assets/images/imagen-steps.svg" alt="Squear Clover" class="mobile-groups1 box2">
         </div>
     </div>
-    <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1">
+    <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1 box2">
     <!-- Onboard End -->
     <div class="text-center my-8 mb:my-12 lg:my-16 xl:my-20 px-5 md:px-10 lg:px-20 xl:px-40">
         <h4 class="text-primary-DarkBlue text font-bold mt-10 text-4xl md:text-[2.75rem] lg:text-4xl xl:text-[2.75rem] mb-32">What they’ve said</h4>
@@ -94,17 +97,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-const benefit = gsap.timeline({ scrollTrigger: { trigger: '.benefits', toggleActions: 'play pause restart reset' } })
+const onboard = gsap.timeline({ scrollTrigger: { trigger: '.benefit', toggleActions: 'play pause restart reset' } })
 
 onMounted(() => {
     gsap.from('.box', { x: -600, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
     gsap.from('#image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
+    gsap.from('.solution-text', { x: 1600, duration: 1.5, scrollTrigger: { trigger: '.solution-text', toggleActions: 'play pause restart reset' } })
+    gsap.from('.solution-image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.solution', toggleActions: 'play pause restart reset' } })
     gsap.from('.drop', { y: -50, duration: 1, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' }})
+    gsap.from('.benefit-text', { y: -100, duration: 2, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.benefit', toggleActions: 'play pause restart reset' }})
     gsap.from('.trigger', { x: -200, y: 200, duration: 1.5, scrollTrigger: { trigger: '.trigger' } })
     gsap.from('.text', { scale: 0.25, duration: 1.5 })
-    benefit.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
-    benefit.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
-    benefit.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
+    onboard.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
+    onboard.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
+    onboard.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
     gsap.from('.button', { y: 200, duration: 1, scrollTrigger: { trigger: '.button', toggleActions: 'play pause reverse reset' } })
     gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
     slideTestimonials()

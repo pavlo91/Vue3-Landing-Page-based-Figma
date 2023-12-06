@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* PageHeader style start */
+
+.navbar-text {
+  color: var(--m-3-sys-dark-on-surface-variant, #BEC9C5);
+
+  /* M3/title/medium */
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+/* PageHeader style end */
+
+/* Slider style start */
+.boost-text {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+  /* M3/display/large */
+  font-size: 57px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+}
+.slogan-bg {
+  background: var(--m-3-sys-dark-surface-container-low, #191C1B);
+}
+.swin-text {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+/* Slider style start */
+
+/* MainButton style start */
+
+.main-button {
+  border-radius: 100px;
+  background: var(--gradient, linear-gradient(45deg, #00DFC4 0%, #9F24E8 100%));
+  box-shadow: 0px 0px 12px 0px rgba(0, 223, 196, 0.40);
+}
+
+/* MainButton style end */

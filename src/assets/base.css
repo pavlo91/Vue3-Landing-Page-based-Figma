@@ -16,27 +16,10 @@ body {
   background: #000000;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar-text {
-  color: var(--m-3-sys-dark-on-surface-variant, #BEC9C5);
-
-  /* M3/title/medium */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: 0.15px;
-}
-
-.main-button {
-  border-radius: 100px;
-  background: var(--gradient, linear-gradient(45deg, #00DFC4 0%, #9F24E8 100%));
-  box-shadow: 0px 0px 12px 0px rgba(0, 223, 196, 0.40);
-}

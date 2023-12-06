@@ -53,3 +53,21 @@ body {
   letter-spacing: 0.5px;
 }
 
+.benefit-icon {
+  background: var(--m-3-state-layers-dark-primary-opacity-016, rgba(208, 188, 255, 0.16));
+}
+
+.benefit-main-title {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.benefit-description {
+  color: var(--m-3-sys-dark-on-background, #E0E3E1);
+  align-self: stretch;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+

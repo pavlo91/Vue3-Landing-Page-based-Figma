@@ -1,9 +1,67 @@
 <template>
-    <Slider />
-    <Solution />
-    <Benefits />
-    <OnBoard />
-    
+    <!-- Slogan Start -->
+    <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-10 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 md:px-10 lg:px-20 xl:px-40">
+      <div class="lg:hidden">
+          <img src="../assets/images/mobile-group.svg" alt="" id="image" class="w-[45rem]">
+      </div>
+      <ItemWithButton button-text="I want a Demo" item-title="Boost Sales with Effortless In-App Ordering" item-description="Swin Drinks™ unveils digital solutions to enhance revenue and capitalize on missed opportunities within the nightlife industry" />
+      <div class="lg:block hidden">
+          <img src="../assets/images/mobile-group.svg" alt="" id="image" class="mobile-groups">
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 slogan-bg items-center py-12 relative overflow-hidden md:px-10 lg:px-20 xl:px-40">
+      <div class="flex lg:gap-4 xl:gap-8">
+          <img src="../assets/images/swin-logo-gray.svg" alt="Swin Logo">
+      </div>
+      <div class="flex lg:gap-4 xl:gap-8">
+          <img src="../assets/images/swin-logo-gray.svg" alt="Swin Logo">
+      </div>
+    </div>
+    <!-- Slider End -->
+    <!-- Solgan Start -->
+    <div class="mt-20 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40">
+      <div class="lg:hidden">
+          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="w-[45rem]">
+      </div>
+      <div class="lg:block hidden">
+          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="mobile-1">
+      </div>
+      <!-- Slogan End -->
+      <!-- Solution Start -->
+      <div class="max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start">
+        <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions"/>
+        <div class="mt-12">
+            <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
+                <SolutionItem :icon-url="item.iconUrl" :solution-title="item.solutionTitle" :solution-description="item.solutionDescription"/>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Solution End -->
+    <!-- Benefit Start -->
+    <div class="slogan-bg items-center py-20 relative overflow-hidden md:px-10 lg:px-20 xl:px-40">
+        <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
+        <div class="flex items-center items-space-beetween">
+            <div v-for="item in benefits" :key="item.bIconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
+                <BenefitItem :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
+            </div>
+        </div>
+    </div>
+    <!-- Benefit End -->
+    <!-- Onboard Start -->
+    <div class="grid grid-flow-row benefits lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
+        <div>
+            <div v-for="item in onboards" :key="item.id" class="flex ml-5 lg:ml-0 lg:gap-5 mb-5">
+                <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" />
+            </div>
+        </div>
+        <!-- <img src="../assets/images/square-clover.png" alt="" class="absolute -z-50 lg:-left-[30rem] lg:top-3/4 trigger -right-[40rem] -top-3/4"> -->
+        <div class="lg:block hidden">
+        <img src="../assets/images/imagen-steps.svg" alt="Squear Clover" class="mobile-groups1">
+        </div>
+    </div>
+    <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1">
+    <!-- Onboard End -->
     <div class="text-center my-8 mb:my-12 lg:my-16 xl:my-20 px-5 md:px-10 lg:px-20 xl:px-40">
         <h4 class="text-primary-DarkBlue text font-bold mt-10 text-4xl md:text-[2.75rem] lg:text-4xl xl:text-[2.75rem] mb-32">What they’ve said</h4>
         <div class="grid grid-flow-col gap-10 mb-16 relative" id="slider" >
@@ -27,15 +85,16 @@ import { onMounted } from 'vue';
 import MainButton from './MainButton.vue';
 import TitleComponent from './TitleComponent.vue';
 import SolutionItem from './SolutionItem.vue';
+import BenefitItem from './BenefitItem.vue';
+import EffortItem from './EffortItem.vue';
+import ItemWithButton from './ItemWithButton.vue';
 
-import Slider from './Slider.vue';
-import Solution from './Solution.vue';
-import Benefits from './Benefits.vue';
-import OnBoard from './OnBoard.vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
+
+const benefit = gsap.timeline({ scrollTrigger: { trigger: '.benefits', toggleActions: 'play pause restart reset' } })
 
 onMounted(() => {
     gsap.from('.box', { x: -600, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
@@ -43,13 +102,88 @@ onMounted(() => {
     gsap.from('.drop', { y: -50, duration: 1, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' }})
     gsap.from('.trigger', { x: -200, y: 200, duration: 1.5, scrollTrigger: { trigger: '.trigger' } })
     gsap.from('.text', { scale: 0.25, duration: 1.5 })
-    // benefit.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
-    // benefit.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
-    // benefit.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
+    benefit.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
+    benefit.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
+    benefit.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
     gsap.from('.button', { y: 200, duration: 1, scrollTrigger: { trigger: '.button', toggleActions: 'play pause reverse reset' } })
-    // gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
+    gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
     slideTestimonials()
 })
+
+const solutions = [
+    {
+        iconUrl: 'src/assets/images/mobile_friendly.svg',
+        solutionTitle: 'Mobile Ordering',
+        solutionDescription: 'Simplify the ordering process for increased revenue. Allow customers to place orders seamlessly from their mobile devices, contributing to enhanced convenience and boosted sales'
+    },
+    {
+        iconUrl: 'src/assets/images/flash_on.svg',
+        solutionTitle: 'Flash Passes',
+        solutionDescription: 'Increase your earnings with Flash Passes – a smart way to turn missed chances into profits. Customers skip lines, enjoy a smoother experience, and boost your operational efficiency. Elevate your business with premium access for hassle-free visits.'
+    },
+    {
+        iconUrl: 'src/assets/images/event.svg',
+        solutionTitle: 'Event Management',
+        solutionDescription: 'Seamlessly create, edit, and manage events with a comprehensive event management system. Keep track of reservations, promotions, and event details in real time'
+    },
+    {
+        iconUrl: 'src/assets/images/bar_chart.svg',
+        solutionTitle: 'Live Statistics',
+        solutionDescription: 'Access real-time statistics that offer instant insights into sales, customer behavior, and other key metrics, empowering you to make data-driven decisions on the spot.'
+    },
+]
+
+const benefits = [
+      {
+          bIconUrl: 'src/assets/images/stacked_line_chart.svg',
+          benefitTitle: 'Increased Revenue',
+          benefitDescription: 'Unlock new sales opportunities with tempting live time-limited discounts. Combined with in-app ordering, customers can efficiently place more orders, providing a competitive edge'
+      },
+      {
+          bIconUrl: 'src/assets/images/groups.svg',
+          benefitTitle: 'Enhanced Decision-Making',
+          benefitDescription: 'Gain a competitive advantage with real-time live sale metrics. Make on-the-spot decisions for improved efficiency and profitability. Utilize comprehensive data analytics to strategically assess trends and optimize inventory.'
+      },
+      {
+          bIconUrl: 'src/assets/images/timer.svg',
+          benefitTitle: 'Effortless Event Management',
+          benefitDescription: 'Efficiently manage events from creation to promotion, simplifying reservations, and creating a welcoming atmosphere for repeat business.'
+      },
+      
+  ]
+const onboards = [
+      {
+          id: '01',
+          eIconUrl: 'src/assets/images/number-1.svg',
+          effortTitle: 'POS Integration:',
+          effortDescription: 'Connect our app with your POS to allow your customers to order directly from their phones. No new hardware, no additional training—just more orders and satisfied customers.'
+      },
+      {
+          id: '02',
+          eIconUrl: 'src/assets/images/number-2.svg',
+          effortTitle: 'Quick Setup',
+          effortDescription: "Easily create your club's profile in our system. We'll handle the initial setup, so you can focus on what you do best"
+      },
+      {
+          id: '03',
+          eIconUrl: 'src/assets/images/number-3.svg',
+          effortTitle: 'Create your Events',
+          effortDescription: 'Organize events and control access with ease, enhancing the customer experience from the start'
+      },
+      {
+          id: '04',
+          eIconUrl: 'src/assets/images/number-4.svg',
+          effortTitle: 'In-App Ordering:',
+          effortDescription: 'Customers can order their next round without leaving their conversation, and your staff can serve without skipping a beat'
+      },
+      {
+          id: '05',
+          eIconUrl: 'src/assets/images/number-5.svg',
+          effortTitle: ' Wrap-Up The Night',
+          effortDescription: "Close your night effortlessly—your current routines remain unchanged. Then, dive into the app to see a snapshot of your venue's performance, from ticket sales to patron preferences, unlocking insights designed to inform and boost your business strategy."
+      },
+      
+  ]
 
 const testimonials = [
     {

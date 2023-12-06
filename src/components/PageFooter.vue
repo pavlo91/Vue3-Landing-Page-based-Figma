@@ -1,5 +1,4 @@
 <template>
-    
     <div class="grid lg:grid-flow-col bg-secondary-DarkBlue text-secondary-LightGray pt-10 xl:pt-20 pb-7 xl:pb-10 px-5 md:px-10 lg:px-20 xl:px-40">
         <div class="grid">
             <img src="../assets/images/logo.svg" alt="" class="self-start">

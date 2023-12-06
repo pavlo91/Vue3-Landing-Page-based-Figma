@@ -11,12 +11,34 @@
     </div>
     <!-- <img src="../assets/images/square-clover.png" alt="" class="absolute -z-50 lg:-left-[30rem] lg:top-3/4 trigger -right-[40rem] -top-3/4"> -->
     <div class="lg:block hidden">
-      <img src="../assets/images/square-clover.png" alt="" id="image" class="mobile-groups">
-    </div>     
+      <img src="../assets/images/square-clover.png" alt="Squear Clover" class="mobile-groups1">
+    </div>
   </div>
+  <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1">     
 </template>
 
 <script setup lang="ts">
+  import { onMounted } from 'vue';
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const benefit = gsap.timeline({ scrollTrigger: { trigger: '.benefits', toggleActions: 'play pause restart reset' } })
+
+  onMounted(() => {
+    // gsap.from('.box', { x: -600, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
+    // gsap.from('#image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
+    // gsap.from('.drop', { y: -50, duration: 1, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' }})
+    // gsap.from('.trigger', { x: -200, y: 200, duration: 1.5, scrollTrigger: { trigger: '.trigger' } })
+    // gsap.from('.text', { scale: 0.25, duration: 1.5 })
+    benefit.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
+    benefit.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
+    benefit.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
+    // gsap.from('.button', { y: 200, duration: 1, scrollTrigger: { trigger: '.button', toggleActions: 'play pause reverse reset' } })
+    // gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
+})
+
   const benefits = [
       {
           id: '01',

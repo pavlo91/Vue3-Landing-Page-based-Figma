@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40">
+  <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-10 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 md:px-10 lg:px-20 xl:px-40">
       <div class="lg:hidden">
           <img src="../assets/images/mobile-group.png" alt="" id="image" class="w-[45rem]">
       </div>

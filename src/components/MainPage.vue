@@ -1,5 +1,5 @@
 <template>
-    <!-- Slogan Start -->
+    <!-- Slider Start -->
     <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-10 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 md:px-10 lg:px-20 xl:px-40">
       <div class="lg:hidden">
           <img src="../assets/images/mobile-group.svg" alt="" id="image" class="w-[45rem]">
@@ -9,7 +9,8 @@
           <img src="../assets/images/mobile-group.svg" alt="" id="image" class="mobile-groups">
       </div>
     </div>
-    <div class="grid lg:grid-cols-2 slogan-bg items-center py-12 relative overflow-hidden md:px-10 lg:px-20 xl:px-40">
+    <!-- Slogan Start -->
+    <div class="flex slogan-bg items-center gap-14 lg:gap-8  py-12 relative overflow-hidden md:px-10 lg:px-20 xl:px-40 ">
       <div class="flex lg:gap-4 xl:gap-8">
           <img src="../assets/images/swin-logo-gray.svg" alt="Swin Logo">
       </div>
@@ -17,17 +18,16 @@
           <img src="../assets/images/swin-logo-gray.svg" alt="Swin Logo">
       </div>
     </div>
+    <!-- Slogan End -->
     <!-- Slider End -->
-    <!-- Solgan Start -->
+    <!-- Solution Start -->
     <div class="mt-20 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 solution">
       <div class="lg:hidden">
-          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="w-[45rem]">
+          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="w-[45rem] solution-image">
       </div>
       <div class="lg:block hidden solution-image">
           <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="mobile-1">
       </div>
-      <!-- Slogan End -->
-      <!-- Solution Start -->
       <div class="max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">
         <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions"/>
         <div class="mt-12">
@@ -65,6 +65,7 @@
     </div>
     <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1 box2">
     <!-- Onboard End -->
+    <!-- Testimal Start -->
     <div class="text-center my-8 mb:my-12 lg:my-16 xl:my-20 px-5 md:px-10 lg:px-20 xl:px-40">
         <h4 class="text-primary-DarkBlue text font-bold mt-10 text-4xl md:text-[2.75rem] lg:text-4xl xl:text-[2.75rem] mb-32">What they’ve said</h4>
         <div class="grid grid-flow-col gap-10 mb-16 relative" id="slider" >
@@ -79,8 +80,60 @@
                 <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
             </div> -->
         </div>
-        <MainButton text="Get Started"  class="mb-5 button"/>
+        <!-- <MainButton text="Get Started"  class="mb-5 button"/> -->
     </div>
+    <!-- Testimal End -->
+    <!-- Preguntas Start -->
+    <div class="mt-20 grid lg:grid-cols-1 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price">
+      <div class="max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start price-text">
+        <TitleComponent sub-title="faqs" main-title="Preguntas Frecuentes" />
+        <p class="-ml-16 lg:ml-0 solution-description">Preguntas comunes sobre integración de la app, costos, soporte y uso. Ayuda a reducir el número de consultas que recibe tu equipo y manejar objeciones de antemano.</p>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex flex-col items-center lg:items-start mt-4">
+            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8 mb-4">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+            <div class=" text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg border-radius-4 px-8 py-8 mb-4">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center lg:items-start mt-4">
+            <div class="text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg px-8 py-8 mb-4">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8 mb-4">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+            <div class="text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg px-8 py-8">
+                <h4 class="pregunta-title mb-4">Preguntas</h4>
+                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Preguntas End -->
+    <!-- Pricing Start -->
+    <div class="mt-20 slogan-bg grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price">
+      <div class="lg:hidden price-image">
+          <img src="../assets/images/mobile-prices.svg" alt="Mobile Price" class="w-[45rem]">
+      </div>
+      <div class="lg:block hidden price-image">
+          <img src="../assets/images/mobile-prices.svg" alt="Mobile Price" class="mobile-1">
+      </div>
+      <div class="max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start price-text">
+        <ItemWithButton item-title="Pricing" item-description="Our pricing model aligns seamlessly with your sales growth. We only charge a modest percentage of your earnings, and the additional income we generate for you promptly offsets this cost" button-text="I want a Demo" />
+      </div>
+    </div>
+    <!-- Pricing End -->
 </template>
 
 <script setup lang="ts">

@@ -1,59 +1,62 @@
 <template>
-  <div class="grid grid-flow-row benefits lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
-    <div>
-        <div v-for="benefit in benefits" :key="benefit.id" class="flex ml-5 lg:ml-0 lg:gap-5 mb-10">
-          <p class="p-2 px-5 number md:px-6 lg:px-5 xl:px-6 font-bold rounded-full relative z-10 text-secondary-LightGray bg-primary-BrightRed h-fit">{{ benefit.id }}</p>
-          <div class="benefit">
-              <h6 class="font-bold mb-5 text-primary-DarkBlue lg:bg-inherit px-8 -ml-4 lg:ml-0 -z-10 relative right-0 py-2 lg:p-0 bg-secondary-paleRed">{{ benefit.title }}</h6>
-              <p class="-ml-16 lg:ml-0">{{ benefit.subtitle }}</p>
+  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
+      <div class="onboard">
+          <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
+          <div class="mt-12">
+              <div v-for="item in onboards" :key="item.id" class="px-4 items-center lg:ml-0 lg:gap-5 mb-5">
+                  <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" >
+                  </EffortItem>
+                  <ImageItem :url="item.imageUrl" class-name="lg:hidden mobile-groups1 box2"/>
+              </div>
           </div>
-        </div>
-    </div>
-    <!-- <img src="../assets/images/square-clover.png" alt="" class="absolute -z-50 lg:-left-[30rem] lg:top-3/4 trigger -right-[40rem] -top-3/4"> -->
-    <div class="lg:block hidden">
-      <img src="../assets/images/imagen-steps.svg" alt="Squear Clover" class="mobile-groups1">
-    </div>
-  </div>
-  <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1">     
+      </div>
+      <div v-for="item in onboards" :key="item.id" class="px-4 lg:ml-0 lg:gap-5 mb-5">
+        <ImageItem :url="item.imageUrl" class-name="lg:block hidden mobile-groups1 box2"/>
+      </div>
+  </div>     
 </template>
 
 <script setup lang="ts">
-  import { onMounted } from 'vue';
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import TitleComponent from '@/components/TitleComponent.vue';
+  import EffortItem from '@/components/EffortItem.vue';
+  import ImageItem from '@/components/ImageItem.vue';
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  const benefit = gsap.timeline({ scrollTrigger: { trigger: '.benefits', toggleActions: 'play pause restart reset' } })
-
-  onMounted(() => {
-    // gsap.from('.box', { x: -600, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
-    // gsap.from('#image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' } })
-    // gsap.from('.drop', { y: -50, duration: 1, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.box', toggleActions: 'play pause restart reset' }})
-    // gsap.from('.trigger', { x: -200, y: 200, duration: 1.5, scrollTrigger: { trigger: '.trigger' } })
-    // gsap.from('.text', { scale: 0.25, duration: 1.5 })
-    benefit.from('.box2', { y: -250, duration: 1.5, opacity: 0 })
-    benefit.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
-    benefit.from('.benefit', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
-    // gsap.from('.button', { y: 200, duration: 1, scrollTrigger: { trigger: '.button', toggleActions: 'play pause reverse reset' } })
-    // gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
-})
-
-  const benefits = [
+  const onboards = [
       {
           id: '01',
-          title: 'Track company-wide progress',
-          subtitle: 'See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.'
+          eIconUrl: 'src/assets/images/number-1.svg',
+          effortTitle: 'POS Integration:',
+          effortDescription: 'Connect our app with your POS to allow your customers to order directly from their phones. No new hardware, no additional training—just more orders and satisfied customers.',
+          imageUrl: 'src/assets/images/imagen-steps.svg'
       },
       {
           id: '02',
-          title: 'Advanced built-in reports',
-          subtitle: 'Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.'
+          eIconUrl: 'src/assets/images/number-2.svg',
+          effortTitle: 'Quick Setup',
+          effortDescription: "Easily create your club's profile in our system. We'll handle the initial setup, so you can focus on what you do best",
+          imageUrl: 'src/assets/images/quick-setup.svg'
       },
       {
           id: '03',
-          title: 'Everything you need in one place',
-          subtitle: 'Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.'
-      }
+          eIconUrl: 'src/assets/images/number-3.svg',
+          effortTitle: 'Create your Events',
+          effortDescription: 'Organize events and control access with ease, enhancing the customer experience from the start',
+          imageUrl: 'src/assets/images/e-events.svg'
+      },
+      {
+          id: '04',
+          eIconUrl: 'src/assets/images/number-4.svg',
+          effortTitle: 'In-App Ordering:',
+          effortDescription: 'Customers can order their next round without leaving their conversation, and your staff can serve without skipping a beat',
+          imageUrl: 'src/assets/images/ordering.svg'
+      },
+      {
+          id: '05',
+          eIconUrl: 'src/assets/images/number-5.svg',
+          effortTitle: ' Wrap-Up The Night',
+          effortDescription: "Close your night effortlessly—your current routines remain unchanged. Then, dive into the app to see a snapshot of your venue's performance, from ticket sales to patron preferences, unlocking insights designed to inform and boost your business strategy.",
+          imageUrl: 'src/assets/images/wrap-night.svg'
+      },
+      
   ]
 </script>

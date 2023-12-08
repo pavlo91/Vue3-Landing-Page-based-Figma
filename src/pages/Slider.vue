@@ -11,7 +11,7 @@
             <ImageItem url="src/assets/images/Events.svg" class-name="z-10" img-class="w-[45rem]" />
             <ImageItem url="src/assets/images/Tickets.svg" class-name="mt-14 -ml-10" img-class="w-[45rem]" />
         </div>
-        <div class="flex slogan-bg items-center gap-14 lg:gap-8 lg:py-12 overflow-hidden md:px-10 lg:px-20 xl:px-40 lg:absolute lg:-bottom-12">
+        <div class="flex slogan-bg items-center gap-14 lg:gap-8 lg:py-12 overflow-hidden md:px-10 lg:px-20 xl:px-40 lg:absolute lg:-bottom-12 md:w-[120%]">
           <p class="ml-10 lg:ml-0 solution-description">Our partner</p>
           <div class="flex lg:gap-4 xl:gap-8">
               <img src="../assets/images/swin-logo-gray.svg" alt="Swin Logo">

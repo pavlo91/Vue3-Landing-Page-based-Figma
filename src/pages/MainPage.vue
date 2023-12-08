@@ -1,54 +1,15 @@
 <template>
     <!-- Slider Start -->
     <Slider />
-    <!-- Slogan Start -->
-    <!-- Slogan End -->
     <!-- Slider End -->
     <!-- Solution Start -->
-    <div class="mt-20 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 solution">
-      <div class="lg:hidden solution-image">
-          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="w-[45rem]">
-      </div>
-      <div class="lg:block hidden solution-image">
-          <img src="../assets/images/mobile-solution.svg" alt="Mobile Solution" class="mobile-1">
-      </div>
-      <div class="max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">
-        <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions">
-            <MainButton text="Testing Slot" />
-        </TitleComponent>
-        <div class="mt-12">
-            <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
-                <SolutionItem :icon-url="item.iconUrl" :solution-title="item.solutionTitle" :solution-description="item.solutionDescription"/>
-            </div>
-        </div>
-      </div>
-    </div>
+    <Solution />
     <!-- Solution End -->
     <!-- Benefit Start -->
-    <div class="slogan-bg py-20 benefit">
-        <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
-        <div class="grid grid-flow-row md:flex mt-12">
-            <div v-for="item in benefits" :key="item.bIconUrl" class="ml-8 lg:ml-8 lg:gap-5 mb-5 benefit-text">
-                <BenefitItem :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
-            </div>
-        </div>
-    </div>
+    <Benefits />
     <!-- Benefit End -->
     <!-- Onboard Start -->
-    <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
-        <div class="onboard">
-            <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
-            <div class="mt-12">
-                <div v-for="item in onboards" :key="item.id" class="flex ml-5 lg:ml-0 lg:gap-5 mb-5">
-                    <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" />
-                </div>
-            </div>
-        </div>
-        <!-- <img src="../assets/images/square-clover.png" alt="" class="absolute -z-50 lg:-left-[30rem] lg:top-3/4 trigger -right-[40rem] -top-3/4"> -->
-        <div class="lg:block hidden">
-            <img src="../assets/images/imagen-steps.svg" alt="Squear Clover" class="mobile-groups1 box2">
-        </div>
-    </div>
+    <OnBoard />
     <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1 box2">
     <!-- Onboard End -->
     <!-- Testimal Start -->
@@ -70,67 +31,21 @@
     </div>
     <!-- Testimal End -->
     <!-- Preguntas Start -->
-    <div class="mt-20 grid grid-flow-row lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price">
-      <div class="max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start price-text">
-        <TitleComponent sub-title="faqs" main-title="Preguntas Frecuentes" />
-        <p class="-ml-16 lg:ml-0 solution-description">Preguntas comunes sobre integración de la app, costos, soporte y uso. Ayuda a reducir el número de consultas que recibe tu equipo y manejar objeciones de antemano.</p>
-      </div>
-      <div class="grid grid-flow-row md:grid-cols-2 gap-4 mt-4">
-        <div class="flex flex-col items-center lg:items-start">
-            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8 mb-4">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-            <div class=" text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg border-radius-4 px-8 py-8 mb-4">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-        </div>
-        <div class="flex flex-col items-center lg:items-start">
-            <div class="text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg px-8 py-8 mb-4">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-            <div class="text-center lg:text-left flex flex-col items-center lg:items-start prgunta-bgg px-8 py-8 mb-4">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-            <div class="text-center lg:text-left flex flex-col items-center lg:items-start pregunta-bg px-8 py-8">
-                <h4 class="pregunta-title mb-4">Preguntas</h4>
-                <p class="pregunta-description">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris.</p>
-            </div>
-        </div>
-      </div>
-    </div>
+    <Pregunta />
     <!-- Preguntas End -->
     <!-- Pricing Start -->
-    <div class="mt-20 slogan-bg grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price">
-      <div class="lg:hidden price-image">
-          <img src="../assets/images/mobile-prices.svg" alt="Mobile Price" class="w-[45rem]">
-      </div>
-      <div class="lg:block hidden price-image">
-          <img src="../assets/images/mobile-prices.svg" alt="Mobile Price" class="mobile-1">
-      </div>
-      <div class="max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start price-text">
-        <ItemWithButton item-title="Pricing" item-description="Our pricing model aligns seamlessly with your sales growth. We only charge a modest percentage of your earnings, and the additional income we generate for you promptly offsets this cost" button-text="I want a Demo" />
-      </div>
-    </div>
+    <Pricing />
     <!-- Pricing End -->
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import MainButton from '@/components/MainButton.vue';
-import TitleComponent from '@/components/TitleComponent.vue';
-import SolutionItem from '@/components/SolutionItem.vue';
-import BenefitItem from '@/components/BenefitItem.vue';
-import EffortItem from '@/components/EffortItem.vue';
-import ItemWithButton from '@/components/ItemWithButton.vue';
 import Slider from '@/pages/Slider.vue';
+import Solution from '@/pages/Solution.vue';
+import Benefits from '@/pages/Benefits.vue';
+import OnBoard from '@/pages/OnBoard.vue';
+import Pregunta from '@/pages/Pregunta.vue';
+import Pricing from '@/pages/Pricing.vue';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -155,81 +70,6 @@ onMounted(() => {
     gsap.from('.slider', { x: 200, duration: 1.5, repeat: -1, repeatDelay: 0.5})
     slideTestimonials()
 })
-
-const solutions = [
-    {
-        iconUrl: 'src/assets/images/mobile_friendly.svg',
-        solutionTitle: 'Mobile Ordering',
-        solutionDescription: 'Simplify the ordering process for increased revenue. Allow customers to place orders seamlessly from their mobile devices, contributing to enhanced convenience and boosted sales'
-    },
-    {
-        iconUrl: 'src/assets/images/flash_on.svg',
-        solutionTitle: 'Flash Passes',
-        solutionDescription: 'Increase your earnings with Flash Passes – a smart way to turn missed chances into profits. Customers skip lines, enjoy a smoother experience, and boost your operational efficiency. Elevate your business with premium access for hassle-free visits.'
-    },
-    {
-        iconUrl: 'src/assets/images/event.svg',
-        solutionTitle: 'Event Management',
-        solutionDescription: 'Seamlessly create, edit, and manage events with a comprehensive event management system. Keep track of reservations, promotions, and event details in real time'
-    },
-    {
-        iconUrl: 'src/assets/images/bar_chart.svg',
-        solutionTitle: 'Live Statistics',
-        solutionDescription: 'Access real-time statistics that offer instant insights into sales, customer behavior, and other key metrics, empowering you to make data-driven decisions on the spot.'
-    },
-]
-
-const benefits = [
-      {
-          bIconUrl: 'src/assets/images/stacked_line_chart.svg',
-          benefitTitle: 'Increased Revenue',
-          benefitDescription: 'Unlock new sales opportunities with tempting live time-limited discounts. Combined with in-app ordering, customers can efficiently place more orders, providing a competitive edge'
-      },
-      {
-          bIconUrl: 'src/assets/images/groups.svg',
-          benefitTitle: 'Enhanced Decision-Making',
-          benefitDescription: 'Gain a competitive advantage with real-time live sale metrics. Make on-the-spot decisions for improved efficiency and profitability. Utilize comprehensive data analytics to strategically assess trends and optimize inventory.'
-      },
-      {
-          bIconUrl: 'src/assets/images/timer.svg',
-          benefitTitle: 'Effortless Event Management',
-          benefitDescription: 'Efficiently manage events from creation to promotion, simplifying reservations, and creating a welcoming atmosphere for repeat business.'
-      },
-      
-  ]
-const onboards = [
-      {
-          id: '01',
-          eIconUrl: 'src/assets/images/number-1.svg',
-          effortTitle: 'POS Integration:',
-          effortDescription: 'Connect our app with your POS to allow your customers to order directly from their phones. No new hardware, no additional training—just more orders and satisfied customers.'
-      },
-      {
-          id: '02',
-          eIconUrl: 'src/assets/images/number-2.svg',
-          effortTitle: 'Quick Setup',
-          effortDescription: "Easily create your club's profile in our system. We'll handle the initial setup, so you can focus on what you do best"
-      },
-      {
-          id: '03',
-          eIconUrl: 'src/assets/images/number-3.svg',
-          effortTitle: 'Create your Events',
-          effortDescription: 'Organize events and control access with ease, enhancing the customer experience from the start'
-      },
-      {
-          id: '04',
-          eIconUrl: 'src/assets/images/number-4.svg',
-          effortTitle: 'In-App Ordering:',
-          effortDescription: 'Customers can order their next round without leaving their conversation, and your staff can serve without skipping a beat'
-      },
-      {
-          id: '05',
-          eIconUrl: 'src/assets/images/number-5.svg',
-          effortTitle: ' Wrap-Up The Night',
-          effortDescription: "Close your night effortlessly—your current routines remain unchanged. Then, dive into the app to see a snapshot of your venue's performance, from ticket sales to patron preferences, unlocking insights designed to inform and boost your business strategy."
-      },
-      
-  ]
 
 const testimonials = [
     {

@@ -1,5 +1,5 @@
 <template>
-  <div class="slogan-bg lg:py-20 lg:px-20 benefit">
+  <div class="slogan-bg py-20 px-4 lg:px-20 benefit">
     <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
     <div class="grid grid-flow-row lg:grid-cols-3 md:flex mt-12">
         <div v-for="item in benefits" :key="item.bIconUrl" class="lg:gap-5 mb-5 benefit-text">

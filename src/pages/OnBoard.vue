@@ -13,7 +13,8 @@
       <div v-for="item in onboards" :key="item.id" class="px-4 lg:ml-0 lg:gap-5 mb-5">
         <ImageItem :url="item.imageUrl" class-name="lg:block hidden mobile-groups1 box2"/>
       </div>
-  </div>     
+    </div>
+    <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1 box2">     
 </template>
 
 <script setup lang="ts">

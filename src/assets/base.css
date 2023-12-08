@@ -33,7 +33,7 @@ body {
 
 .main-title {
   color: var(--m-3-sys-dark-on-background, #E0E3E1);
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 52px; /* 115.556% */
 }

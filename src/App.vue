@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import MainPage from '@/components/MainPage.vue';
-import PageHeader from '@/components/PageHeader.vue';
-import PageFooter from '@/components/PageFooter.vue'
+import MainPage from '@/pages/MainPage.vue';
+import PageHeader from '@/pages/PageHeader.vue';
+import PageFooter from '@/pages/PageFooter.vue'
 </script>
 
 <template>

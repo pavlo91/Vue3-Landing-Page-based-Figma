@@ -1,6 +1,9 @@
 <template>
-  <p class="sub-title mb-1">{{ props.subTitle }}</p>
-  <h3 class="main-title font-bold">{{props.mainTitle}}</h3>
+  <div class="text-left">
+    <p class="sub-title mb-1">{{ props.subTitle }}</p>
+    <h4 class="main-title">{{props.mainTitle}}</h4>
+  </div>
+  <slot></slot>
 </template>
 
 <script setup lang="ts">

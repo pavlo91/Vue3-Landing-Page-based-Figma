@@ -26,6 +26,7 @@
 }
 .slogan-bg {
   background: var(--m-3-sys-dark-surface-container-low, #191C1B);
+  width: 100%;
 }
 
 .prgunta-bgg {

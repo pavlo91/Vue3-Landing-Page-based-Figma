@@ -63,7 +63,20 @@
   
 }
 /* Slider style start */
+/* .marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 5s linear infinite;
+}
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
 /* MainButton style start */
 
 .main-button {

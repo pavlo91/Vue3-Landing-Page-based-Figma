@@ -1,16 +1,5 @@
 <template>
-  <div :class="props.className">
+  <div class="px-4 md:px-20 lg:px-36 xl:px-[154px]">
     <slot></slot>
   </div>
 </template>
-
-<script setup lang="ts">
-  import { defineProps, withDefaults } from 'vue';
-  interface ContainerProps {
-    className?: string;
-  }
-
-  const props = withDefaults(defineProps<ContainerProps>(), {
-    className: 'ski-container',
-  });
-</script>

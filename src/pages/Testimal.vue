@@ -12,46 +12,46 @@
 </template>
 
 <script setup lang="ts">
-  import { onMounted } from 'vue';
-  onMounted(() => {
-        slideTestimonials()
-    })
-  const testimonials = [
-      {
-          avatar: 'src/assets/images/avatar-anisha.png',
-          name: 'Anisha Li',
-          testimony: '“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”'
-      },
-      {
-          avatar: 'src/assets/images/avatar-ali.png',
-          name: 'Ali Bravo',
-          testimony: '“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”'
-      },
-      {
-          avatar: 'src/assets/images/avatar-richard.png',
-          name: 'Richard Watts',
-          testimony: '“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”'
-      },
-      {
-          avatar: 'src/assets/images/avatar-shanai.png',
-          name: 'Shanai Gough',
-          testimony: '“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”'
-      }
-  ]
+    import { onMounted } from 'vue';
+    onMounted(() => {
+            slideTestimonials()
+        })
+    const testimonials = [
+        {
+            avatar: 'src/assets/images/avatar-anisha.png',
+            name: 'Anisha Li',
+            testimony: '“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”'
+        },
+        {
+            avatar: 'src/assets/images/avatar-ali.png',
+            name: 'Ali Bravo',
+            testimony: '“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”'
+        },
+        {
+            avatar: 'src/assets/images/avatar-richard.png',
+            name: 'Richard Watts',
+            testimony: '“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”'
+        },
+        {
+            avatar: 'src/assets/images/avatar-shanai.png',
+            name: 'Shanai Gough',
+            testimony: '“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”'
+        }
+    ]
 
-  const slideTestimonials = () => {
-      let arr = <any>[]
-      for (let i = 0; i < testimonials.length; i++) {
-          arr.push(document.getElementById('slider')?.children.item(i))
-      }
-      console.log(arr)
-      let i = 1
-      setInterval(() => {
-          // arr.forEach()
-          arr.forEach((e: any) => {
-              e.style.transform = `translateX(-${i * 50}%)`;
-          });
-          i < arr.length ? i++ : i = 0
-      }, 1500)
-  }
+    const slideTestimonials = () => {
+        let arr = <any>[]
+        for (let i = 0; i < testimonials.length; i++) {
+            arr.push(document.getElementById('slider')?.children.item(i))
+        }
+        console.log(arr)
+        let i = 1
+        setInterval(() => {
+            // arr.forEach()
+            arr.forEach((e: any) => {
+                e.style.transform = `translateX(-${i * 50}%)`;
+            });
+            i < arr.length ? i++ : i = 0
+        }, 1500)
+    }
 </script>

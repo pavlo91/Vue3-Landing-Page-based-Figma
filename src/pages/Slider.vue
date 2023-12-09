@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-10 xl:gap-20 mb-10 md:mb-4 lg:mb-4 xl:mb-20 md:px-10 lg:px-20 xl:px-40 lg:relative">
+    <div class="mt-8 grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-10 xl:gap-20 mb-10 md:mb-4 lg:mb-4 xl:mb-20 md:px-10 lg:px-20 xl:px-40 lg:relative">
         <ItemWithButton item-title="Boost Sales with Effortless In-App Ordering" item-description="Swin Drinks™ unveils digital solutions to enhance revenue and capitalize on missed opportunities within the nightlife industry" >
           <MainButton text="I want a Demo" class="mb-5 drop w-[90%] lg:w-fit" />
         </ItemWithButton>
@@ -27,17 +27,21 @@
 </template>
 
 <script setup lang="ts">
+  import PageHeader from './PageHeader.vue';
   import ItemWithButton from '@/components/ItemWithButton.vue';
   import ImageItem from '@/components/ImageItem.vue';
   import MainButton from '@/components/MainButton.vue';
 </script>
 
 <style scoped>
+  .slider-section {
+    background: linear-gradient(238deg, #0E1010 0%, rgba(14, 16, 16, 0.00) 69.08%), linear-gradient(122deg, rgba(14, 16, 16, 0.90) 30.92%, rgba(14, 16, 16, 0.00) 100%), linear-gradient(107deg, #0E1010 0%, rgba(14, 16, 16, 0.50) 100%), url('src/assets/images/back-img.png'), lightgray 50% / cover no-repeat;
+  }
   .image-container {
     white-space: nowrap;
   }
 
-  .image-container img {
+  /* .image-container img {
     display: inline-block;
     animation: scrollImages 5s linear infinite;
   }
@@ -49,5 +53,5 @@
     100% {
       transform: translateX(-150%);
     }
-  }
+  } */
 </style>

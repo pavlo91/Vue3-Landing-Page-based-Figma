@@ -23,10 +23,10 @@
     const scrollPosition = ref(0);
     const navbarClass = computed(() => {
         // Define your logic to determine the class based on the scroll position
-        if (scrollPosition.value > 30) {
-        return 'flex my-10 lg:-mt-5 xl:my-14 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 lg:px-20 xl:px-40 slogan-bg mt-10 fixed z-20';
+        if (scrollPosition.value > 10) {
+        return 'flex my-10 lg:-mt-5 xl:my-14 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 lg:px-20 xl:px-40 swin-header mt-10 fixed z-40';
         } else {
-        return 'flex my-10 xl:my-14 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 lg:px-20 xl:px-40';
+        return 'flex mt-0 my-10 xl:my-14 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 swin-header lg:px-20 xl:px-40';
         }
     });
 
@@ -45,3 +45,9 @@
       window.removeEventListener('scroll', handleScroll);
     });
 </script>
+
+<style scoped>
+    .swin-header {
+        width: 100%;
+    }
+</style>

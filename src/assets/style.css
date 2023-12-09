@@ -19,10 +19,7 @@
 /* Slider style start */
 .boost-text {
   color: var(--m-3-sys-dark-on-background, #E0E3E1);
-  /* M3/display/large */
-  font-size: 57px;
   font-weight: 600;
-  letter-spacing: -0.25px;
 }
 .slogan-bg {
   background: var(--m-3-sys-dark-surface-container-low, #191C1B);
@@ -61,9 +58,12 @@
 }
 
 .main-button {
+  color: var(--m-3-white, #FFF);
   border-radius: 100px;
   background: var(--gradient, linear-gradient(45deg, #00DFC4 0%, #9F24E8 100%));
   box-shadow: 0px 0px 12px 0px rgba(0, 223, 196, 0.40);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /* MainButton style end */

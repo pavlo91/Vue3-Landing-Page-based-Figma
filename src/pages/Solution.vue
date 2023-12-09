@@ -1,23 +1,26 @@
 <template>
-    <div class="grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 xl:gap-20 solution py-20 lg:py-40">
-        <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:hidden solution-image" img-class="w-[45rem]"/>
-        <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:block hidden solution-image" img-class="w-fit"/>
-        <div class="mt-10 lg:mt-0 max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">
-            <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions">
-            </TitleComponent>
-            <div class="mt-12">
-                <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
-                    <SolutionItem :icon-url="item.iconUrl" :solution-title="item.solutionTitle" :solution-description="item.solutionDescription"/>
+    <MainContainer>
+        <div class="grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 xl:gap-20 solution py-20 lg:py-40">
+            <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:hidden solution-image" img-class="w-[45rem]"/>
+            <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:block hidden solution-image" img-class="w-fit"/>
+            <div class="mt-10 lg:mt-0 max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">
+                <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions">
+                </TitleComponent>
+                <div class="mt-12">
+                    <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
+                        <SolutionItem :icon-url="item.iconUrl" :solution-title="item.solutionTitle" :solution-description="item.solutionDescription"/>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </MainContainer>
 </template>
 
 <script setup lang="ts">
     import TitleComponent from '@/components/TitleComponent.vue'
     import ImageItem from '@/components/ImageItem.vue'
     import SolutionItem from '@/components/SolutionItem.vue';
+    import MainContainer from '@/components/MainContainer.vue';
 
     const solutions = [
         {

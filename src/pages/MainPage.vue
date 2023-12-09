@@ -2,6 +2,7 @@
     <!-- Slider Start -->
     <Slider />
     <!-- Slider End -->
+    <OurParner />
     <!-- Solution Start -->
     <Solution />
     <!-- Solution End -->
@@ -25,6 +26,7 @@
 <script setup lang="ts">
     import { onMounted } from 'vue';
     import Slider from '@/pages/Slider.vue';
+    import OurParner from './OurParner.vue';
     import Solution from '@/pages/Solution.vue';
     import Benefits from '@/pages/Benefits.vue';
     import OnBoard from '@/pages/OnBoard.vue';

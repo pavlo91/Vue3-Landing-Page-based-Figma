@@ -46,9 +46,9 @@
   
   gsap.registerPlugin(ScrollTrigger)
 
-  onMounted(() => {
-      gsap.from('.preguntas-text', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.preguntas', toggleActions: 'play pause restart reset' } })
-      gsap.from('.pregunta-item-1', { x: 600, duration: 2, scrollTrigger: { trigger: '.pregunta-items', toggleActions: 'play pause restart reset' } })
-      gsap.from('.pregunta-item-2', { x: -600, duration: 2, scrollTrigger: { trigger: '.pregunta-items', toggleActions: 'play pause restart reset' } })
-  })
+  // onMounted(() => {
+  //     gsap.from('.preguntas-text', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.preguntas', toggleActions: 'play pause restart reset' } })
+  //     gsap.from('.pregunta-item-1', { x: 600, duration: 2, scrollTrigger: { trigger: '.pregunta-items', toggleActions: 'play pause restart reset' } })
+  //     gsap.from('.pregunta-item-2', { x: -600, duration: 2, scrollTrigger: { trigger: '.pregunta-items', toggleActions: 'play pause restart reset' } })
+  // })
 </script>

@@ -17,9 +17,9 @@
 
   gsap.registerPlugin(ScrollTrigger)
   
-  onMounted(() => {
-    gsap.from('.benefit-text', { y: 100, duration: 2, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.benefit', toggleActions: 'play pause restart reset' }})
-  })
+  // onMounted(() => {
+  //   gsap.from('.benefit-text', { y: 100, duration: 2, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.benefit', toggleActions: 'play pause restart reset' }})
+  // })
   const benefits = [
       {
           bIconUrl: 'src/assets/images/stacked_line_chart.svg',

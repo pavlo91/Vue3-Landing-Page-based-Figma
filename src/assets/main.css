@@ -1,15 +1,14 @@
 @import './base.css';
 @import './style.css';
 
-/* #app {
-  margin: 0 auto;
+#app {
+  margin: 0;
   font-weight: normal;
   overflow-x: clip;
-  position: relative;
 }
 
 @media (min-width: 1024px) {
   #app {
     transition: ease;
   }
-} */
+}

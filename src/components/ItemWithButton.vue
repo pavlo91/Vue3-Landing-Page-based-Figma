@@ -1,7 +1,9 @@
 <template>
-  <div class="max-w-lg box text-center lg:text-left flex flex-col items-center lg:items-start mt-10 lg:mt-20">
-      <h3 class="boost-text text-left leading-snug lg:leading-[1.15] xl:leading-[1.15] mb-4">{{ props.itemTitle }}</h3>
-      <p class="swin-text lg:text-lg lg:max-w-lg mb-10">{{ props.itemDescription }}</p>
+  <div class="max-w-lg box text-center lg:text-left flex flex-col items-center lg:items-start lg:pt-20 gap-10">
+      <div class="flex flex-col gap-4">
+        <h3 class="text-4xl lg:text-5xl text-left leading-snug lg:leading-[1.3] xl:leading-[1.3] boost-text">{{ props.itemTitle }}</h3>
+        <p class="text-sm lg:text-lg lg:max-w-lg">{{ props.itemDescription }}</p>
+      </div>
       <slot></slot>
   </div>
 </template>

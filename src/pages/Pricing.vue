@@ -22,9 +22,9 @@
 
   import ItemWithButton from '@/components/ItemWithButton.vue';
   import MainButton from '@/components/MainButton.vue';
-  onMounted(() => {
-      gsap.from('.price-image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.price', toggleActions: 'play pause restart reset' } })
-      gsap.from('.price-text', { y: -200, duration: 2, scrollTrigger: { trigger: '.price', toggleActions: 'play pause restart reset' } })
-  })
+  // onMounted(() => {
+  //     gsap.from('.price-image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.price', toggleActions: 'play pause restart reset' } })
+  //     gsap.from('.price-text', { y: -200, duration: 2, scrollTrigger: { trigger: '.price', toggleActions: 'play pause restart reset' } })
+  // })
 
 </script>

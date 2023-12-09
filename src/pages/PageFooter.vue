@@ -51,7 +51,7 @@
         </div>
     </div>
     
-    <p class="text-center border-t-[1px] self-end py-4 swin-text">Copyright 2020. All Rights Reserved</p>
+    <p class="text-center border-t-[1px] self-end py-4 swin-text">Copyright 2023. All Rights Reserved</p>
 </template>
 
 <script setup lang="ts">

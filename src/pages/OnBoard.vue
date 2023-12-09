@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative">
+  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative effort-onboard">
       <div class="onboard">
           <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
           <div class="mt-12">
@@ -18,11 +18,23 @@
 </template>
 
 <script setup lang="ts">
-  import TitleComponent from '@/components/TitleComponent.vue';
-  import EffortItem from '@/components/EffortItem.vue';
-  import ImageItem from '@/components/ImageItem.vue';
+    import { onMounted } from 'vue';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  const onboards = [
+    import TitleComponent from '@/components/TitleComponent.vue';
+    import EffortItem from '@/components/EffortItem.vue';
+    import ImageItem from '@/components/ImageItem.vue';
+
+    gsap.registerPlugin(ScrollTrigger)
+    const onboard = gsap.timeline({ scrollTrigger: { trigger: '.effort-item', toggleActions: 'play pause restart reset' } })
+
+    onMounted(() => {
+        onboard.from('.effort-onboard', { y: -250, duration: 1.5, opacity: 0 })
+        onboard.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
+        onboard.from('.effort-item', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
+    })
+    const onboards = [
       {
           id: '01',
           eIconUrl: 'src/assets/images/number-1.svg',
@@ -59,5 +71,5 @@
           imageUrl: 'src/assets/images/wrap-night.svg'
       },
       
-  ]
+    ]
 </script>

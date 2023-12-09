@@ -1,18 +1,25 @@
 <template>
   <div class="slogan-bg py-20 px-4 lg:px-20 benefit">
     <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
-    <div class="grid grid-flow-row lg:grid-cols-3 md:flex mt-12">
-        <div v-for="item in benefits" :key="item.bIconUrl" class="lg:gap-5 mb-5 benefit-text">
-            <BenefitItem :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
-        </div>
+    <div class="grid grid-flow-row md:flex mt-12">
+        <BenefitItem  v-for="item in benefits" :key="item.bIconUrl" :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { onMounted } from 'vue';
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
   import TitleComponent from '@/components/TitleComponent.vue'
   import BenefitItem from '@/components/BenefitItem.vue'
 
+  gsap.registerPlugin(ScrollTrigger)
+  
+  onMounted(() => {
+    gsap.from('.benefit-text', { y: 100, duration: 2, delay: 0.5, ease: 'bounce.out', scrollTrigger: { trigger: '.benefit', toggleActions: 'play pause restart reset' }})
+  })
   const benefits = [
       {
           bIconUrl: 'src/assets/images/stacked_line_chart.svg',

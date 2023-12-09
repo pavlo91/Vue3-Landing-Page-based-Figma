@@ -5,13 +5,8 @@ import PageFooter from '@/pages/PageFooter.vue'
 </script>
 
 <template>
-  <header>
-    <PageHeader />
-  </header>
-
-  <main>
-    <MainPage />
-  </main>
+  <PageHeader />
+  <MainPage />
 
   <footer>
     <PageFooter />

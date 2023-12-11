@@ -21,6 +21,5 @@
 <style scoped>
   .full-fit {
     width: 100%!important;
-    height: 100%!important;
   }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="ml-0 lg:gap-5 mb-10 benefit-text">
+  <div class="ml-0 mb-10 lg:mb-0 benefit-text">
     <img :src="props.bIconUrl" class="benefit-icon p-4 px-5 md:px-6 lg:px-5 xl:px-6 rounded-full relative z-10 h-fit mb-6"/>
     <div>
-      <h6 class="lg:whitespace-nowrap  text-2xl lg:text-3xl font-semibold benefit-main-title">{{ props.benefitTitle }}</h6>
-      <p class="lg:ml-0 text-left text-sm lg:text-xl benefit-description">{{ props.benefitDescription }}</p>
+      <h6 class="lg:whitespace-nowrap text-2xl lg:text-3xl font-semibold benefit-main-title mb-4">{{ props.benefitTitle }}</h6>
+      <p class="lg:ml-0 text-left text-sm lg:text-lg benefit-description">{{ props.benefitDescription }}</p>
     </div>
   </div>
 </template>

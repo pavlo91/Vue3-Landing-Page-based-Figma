@@ -26,28 +26,7 @@
   width: 100%;
 }
 
-.prgunta-bgg {
-  background: var(--m-3-sys-dark-surface-container-low, #191C1B);
-  border-radius: 16px;
-}
 
-.pregunta-bg {
-  background: var(--m-3-sys-dark-secondary-container, #334B46);
-  border-radius: 16px;
-}
-
-.pregunta-title {
-  font-size: 28px;
-  font-weight: 600;
-}
-
-.pregunta-description {
-  color: #FFF;
-  text-align: justify;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
 
 .swin-text {
   color: var(--m-3-sys-dark-on-background, #E0E3E1);

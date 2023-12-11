@@ -1,20 +1,20 @@
 <template>
-  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-14 xl:gap-20 my-8 mb:my-12 lg:my-16 xl:my-20 lg:px-20 xl:px-40 relative effort-onboard">
+  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-20 py-20 lg:py-[120px] px-4 lg:px-[152px] effort-onboard">
       <div class="onboard">
           <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
           <div class="mt-12">
-              <div v-for="item in onboards" :key="item.id" class="px-4 items-center lg:ml-0 lg:gap-5 mb-5">
+              <div v-for="item in onboards" :key="item.id" class="items-center ml-0 mb-5 lg:mb-12">
                   <EffortItem :e-icon-url="item.eIconUrl" :effort-title="item.effortTitle" :effort-description="item.effortDescription" >
                   </EffortItem>
-                  <ImageItem :url="item.imageUrl" class-name="lg:hidden mobile-groups1 box2"/>
+                  <ImageItem :url="item.imageUrl" class-name="lg:hidden full-fit"/>
               </div>
           </div>
       </div>
-      <div v-for="item in onboards" :key="item.id" class="px-4 lg:ml-0 lg:gap-5 mb-5">
-        <ImageItem :url="item.imageUrl" class-name="lg:block hidden mobile-groups1 box2"/>
+      <div v-for="item in onboards" :key="item.id" class="px-4 lg:px-0 mb-5">
+        <ImageItem :url="item.imageUrl" class-name="lg:block hidden full-fit"/>
       </div>
     </div>
-    <img src="../assets/images/evolution.png" alt="Evolution" class="mobile-groups1 box2">     
+    <img src="../assets/images/evolution.png" alt="Evolution">     
 </template>
 
 <script setup lang="ts">

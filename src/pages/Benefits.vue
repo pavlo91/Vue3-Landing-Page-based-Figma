@@ -1,7 +1,7 @@
 <template>
   <div class="slogan-bg py-20 lg:py-[120px] px-4 lg:px-[152px] benefit">
     <TitleComponent sub-title="advantages" main-title="Maximize Business Benefits"/>
-    <div class="grid grid-flow-row md:flex mt-12">
+    <div class="grid grid-flow-row md:flex md:gap-10 mt-12">
         <BenefitItem  v-for="item in benefits" :key="item.bIconUrl" :b-icon-url="item.bIconUrl" :benefit-title="item.benefitTitle" :benefit-description="item.benefitDescription" />
     </div>
   </div>

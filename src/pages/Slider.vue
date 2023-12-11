@@ -4,12 +4,12 @@
           <MainButton text="I want a Demo" class="drop w-[100%] lg:w-fit" />
         </ItemWithButton>
         <div class="lg:flex hidden" id="image">
-            <ImageItem url="src/assets/images/Events.svg" class-name="lg:block hidden z-10" />
-            <ImageItem url="src/assets/images/Tickets.svg" class-name="lg:block hidden py-2 mt-14 -ml-10" />
+            <ImageItem url="src/assets/images/sevents.svg" class-name="lg:block hidden z-10" />
+            <ImageItem url="src/assets/images/stickets.svg" class-name="lg:block hidden py-2 mt-14 -ml-10" />
         </div>
         <div class="lg:hidden flex" id="image">
-            <ImageItem url="src/assets/images/Events.svg" class-name="z-10" img-class="w-[45rem]" />
-            <ImageItem url="src/assets/images/Tickets.svg" class-name="mt-14 -ml-10" img-class="w-[45rem]" />
+            <ImageItem url="src/assets/images/sevents.svg" class-name="z-10" img-class="w-[45rem]" />
+            <ImageItem url="src/assets/images/stickets.svg" class-name="mt-14 -ml-10" img-class="w-[45rem]" />
         </div>
     </div>
 </template>

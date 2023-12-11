@@ -7,16 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          BrightRed: '#F25F3A',
-          DarkBlue: '#242D52'
-        },
-        secondary: {
-          DarkGrayishBlue: '#9095A7',
-          DarkBlue: '#1D1E25',
-          paleRed: '#FFEFEB',
-          LightGray: '#FAFAFA'
-        }
+        primary: '#B1CCC5',
+        boldPrimary: '#E0E3E1',
       }
     },
   },

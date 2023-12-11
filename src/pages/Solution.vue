@@ -7,7 +7,7 @@
                 <TitleComponent sub-title="Key Features" main-title="Unlock Powerful Solutions">
                 </TitleComponent>
                 <div class="mt-12">
-                    <div v-for="item in solutions" :key="item.iconUrl" class="ml-5 lg:ml-0 lg:gap-5 mb-5">
+                    <div v-for="item in solutions" :key="item.iconUrl" class="ml-0 lg:gap-5 mb-5">
                         <SolutionItem :icon-url="item.iconUrl" :solution-title="item.solutionTitle" :solution-description="item.solutionDescription"/>
                     </div>
                 </div>

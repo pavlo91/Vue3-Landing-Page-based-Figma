@@ -4,39 +4,62 @@
         <p class="font-medium text-md lg:text-lg testimal-sub-title uppercase">Testimonios</p>
         <h4 class="font-semibold text-2xl lg:text-4xl testimal-title">Lo que opinan</h4>
       </div>
-      <div class="grid grid-flow-row lg:grid-cols-4 lg:gap-10 items-center justify-items-center">
-        <img src="src/assets/images/arrow-back.svg" alt="" class="">
-        <img src="src/assets/images/testimal-1.svg" alt="" class="full-fit">
-        <div class="lg:text-left">
-            <p class="mb-6">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque.”</p>
-            <h6 class="font-bold text-2xl">Nick Jonas</h6>
-            <p class="text-sm font-normal">role</p>
-        </div>
-        <img src="src/assets/images/arrow-forward.svg" alt="" class="">
+      <div>
+      <swiper 
+          :slides-per-view="1"
+          :modules="[Navigation]"
+          :navigation="{
+            nextEl: '.testimonial-sc__button-next',
+            prevEl: '.testimonial-sc__button-prev',
+          }"
+          :space-between="30"
+        >
+          <swiper-slide v-for="testimonial in testimonials" :key="testimonial.name">
+            <div class="grid grid-flow-row lg:grid-cols-4 lg:gap-10 items-center justify-items-center">
+                <div class="lg:block hidden">
+                    <button class="carousel-nav__button testimonial-sc__button-prev">
+                        <img src="src/assets/images/arrow-back.svg">
+                    </button>
+                </div>
+                <div class="mb-6 lg:mb-0">
+                    <img :src="testimonial.avatar" alt="" class="full-fit">
+                </div>
+                <div class="lg:text-left">
+                    <p class="mb-6 testimal-sub-title">{{ testimonial.testimony }}</p>
+                    <h6 class="font-bold text-2xl testimal-title">{{ testimonial.name }}</h6>
+                    <p class="text-sm font-normal testimal-sub-title">{{ testimonial.role }}</p>
+                </div>
+                <div class="lg:block hidden">
+                    <button class="carousel-nav__button testimonial-sc__button-next">
+                        <img src="src/assets/images/arrow-forward.svg">
+                    </button>
+                </div>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
-      <!-- <div class="grid grid-flow-col gap-10 mb-16" id="slider" >
-          <div v-for="testimonial in testimonials" :key="testimonial.name" class="lg:flex max-w-lg slider p-10 items-center transition ease-linear">
-            <div class="mb-8">
-                <img :src="testimonial.avatar" alt="" class="border rounded-full w-40">
-            </div>
-            <div>
-                <p class="mb-6">{{ testimonial.testimony }}</p>
-                <h6 class="font-bold text-2xl">{{ testimonial.name }}</h6>
-                <p class="text-sm font-normal">{{ testimonial.role }}</p>
-            </div>
-          </div>
-      </div> -->
+      <footer class="block lg:hidden">
+        <div class="flex justify-between">
+          <button class="carousel-nav__button testimonial-sc__button-prev">
+            <img src="src/assets/images/arrow-back.svg">
+          </button>
+          <button class="carousel-nav__button testimonial-sc__button-next">
+                <img src="src/assets/images/arrow-forward.svg">
+          </button>
+        </div>
+      </footer>
   </div>
 </template>
 
 <script setup lang="ts">
     import { onMounted } from 'vue';
-    // onMounted(() => {
-    //         slideTestimonials()
-    //     })
+    import { Navigation } from 'swiper/modules';
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import 'swiper/css';
+    
     const testimonials = [
         {
-            avatar: 'src/assets/images/testimal-1.svg',
+            avatar: 'src/assets/images/avatar-anisha.png',
             name: 'Nick Jonas',
             testimony: '“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque.”',
             role: 'role'
@@ -61,21 +84,6 @@
         }
     ]
 
-    // const slideTestimonials = () => {
-    //     let arr = <any>[]
-    //     for (let i = 0; i < testimonials.length; i++) {
-    //         arr.push(document.getElementById('slider')?.children.item(i))
-    //     }
-    //     console.log(arr)
-    //     let i = 1
-    //     setInterval(() => {
-    //         // arr.forEach()
-    //         arr.forEach((e: any) => {
-    //             e.style.transform = `translateX(-${i * 50}%)`;
-    //         });
-    //         i < arr.length ? i++ : i = 0
-    //     }, 1500)
-    // }
 </script>
 
 <style scoped>
@@ -85,4 +93,44 @@
     .testimal-sub-title {
         color: var(--m-3-sys-dark-secondary, #B1CCC5);
     }
+
+    .carousel-nav__button {
+        width: 4rem;
+        height: 4rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none !important;
+        background-color: var(--secondary);
+        color: var(--white);
+        transition: background-color 0.3 ease;
+    }
+
+.testimonial-sc__button-prev {
+  margin-right: 0.5rem;
+}
+
+.swiper-button-disabled {
+  background-color: var(--green-300);
+}
+
+@media screen and (min-width: 992px) {
+  .testimonial-sec {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .testimonial-sec__title {
+    font-size: 2.5rem;
+  }
+
+  .testimonial__quote {
+    font-size: 1.25rem;
+  }
+
+  .testimonial__name {
+    font-size: 1.25rem;
+  }
+}
 </style>

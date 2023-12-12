@@ -6,7 +6,7 @@
       </div>
       <div class="grid grid-flow-row lg:grid-cols-4 lg:gap-10 items-center justify-items-center">
         <img src="src/assets/images/arrow-back.svg" alt="" class="">
-        <img src="src/assets/images/testimal-1.svg" alt="" class="w-full">
+        <img src="src/assets/images/testimal-1.svg" alt="" class="full-fit">
         <div class="lg:text-left">
             <p class="mb-6">“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque.”</p>
             <h6 class="font-bold text-2xl">Nick Jonas</h6>

@@ -27,12 +27,12 @@
     import ImageItem from '@/components/ImageItem.vue';
 
     gsap.registerPlugin(ScrollTrigger)
-    const onboard = gsap.timeline({ scrollTrigger: { trigger: '.effort-item', toggleActions: 'play pause restart reset' } })
+    const onboard = gsap.timeline({ scrollTrigger: { trigger: '.effort-onboard', toggleActions: 'play pause restart reset' } })
 
     onMounted(() => {
-    onboard.from('.effort-onboard', { y: -250, duration: 1.5, opacity: 0 })
-    onboard.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
-    onboard.from('.effort-item', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
+        onboard.from('.effort-onboard', { y: -250, duration: 1.5, opacity: 0 })
+        onboard.from('.number', { y: -100, duration: 1, delay: 0, stagger: 0.5, opacity: 0 }, '<0.5')
+        onboard.from('.effort-item', { x: 200, duration: 1.5, stagger: 0.5, opacity: 0 }, '<')
     })
     const onboards = [
       {

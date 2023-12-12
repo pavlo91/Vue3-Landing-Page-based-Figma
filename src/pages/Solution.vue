@@ -17,11 +17,21 @@
 </template>
 
 <script setup lang="ts">
+    import { onMounted } from 'vue';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
     import TitleComponent from '@/components/TitleComponent.vue'
     import ImageItem from '@/components/ImageItem.vue'
     import SolutionItem from '@/components/SolutionItem.vue';
     import MainContainer from '@/components/MainContainer.vue';
+    
+    gsap.registerPlugin(ScrollTrigger)
 
+    onMounted(() => {
+        gsap.from('.solution-text', { x: 1600, duration: 1.5, scrollTrigger: { trigger: '.solution-text', toggleActions: 'play pause restart reset' } })
+        gsap.from('.solution-image', { scale: 0.5, duration: 1.5, scrollTrigger: { trigger: '.solution', toggleActions: 'play pause restart reset' } })
+    })
     const solutions = [
         {
             iconUrl: 'src/assets/images/mobile_friendly.svg',

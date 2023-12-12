@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-20 py-20 lg:py-[120px] px-4 lg:px-[152px] effort-onboard">
+  <div class="grid grid-flow-row lg:grid-cols-2 lg:gap-20 py-20 lg:py-[120px] px-4 lg:px-[152px] effort-onboard" id="how_it_works">
       <div class="onboard">
           <TitleComponent sub-title="How it works" main-title="Effortless Onboarding"/>
           <div class="mt-12">

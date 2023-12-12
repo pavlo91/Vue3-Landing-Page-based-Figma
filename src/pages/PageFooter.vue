@@ -1,5 +1,5 @@
 <template>
-    <div class="grid px-4 lg:px-[152px] py-20 lg:pt-[175px] lg:pb-[120px] lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 footer-color footer">
+    <div class="grid px-4 lg:px-[152px] py-20 lg:pt-[175px] lg:pb-[120px] lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 footer-color footer" id="contact_us">
         <div class="text-left">
             <p class="font-semibold text-xl uppercase mb-1">Schedule a Demo</p>
             <h4 class="font-semibold text-3xl lg:text-4xl">Learn More About The  Features of Swin Drinks</h4>

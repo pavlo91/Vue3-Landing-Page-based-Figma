@@ -1,6 +1,6 @@
 <template>
     <MainContainer>
-        <div class="grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 xl:gap-20 solution py-20 lg:py-40">
+        <div class="grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-20 xl:gap-20 solution py-20 lg:py-40" id="key_features">
             <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:hidden solution-image" img-class="w-[45rem]"/>
             <ImageItem url="src/assets/images/mobile-solution.svg" class-name="lg:block hidden solution-image" img-class="w-fit"/>
             <div class="mt-10 lg:mt-0 max-w-lg box1 text-center lg:text-left flex flex-col items-center lg:items-start solution-text">

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-20 slogan-bg grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price">
+  <div class="py-20 slogan-bg grid lg:grid-cols-2 justify-items-center lg:justify-items-start lg:gap-14 xl:gap-20 mb-8 md:mb-12 lg:mb-16 xl:mb-20 px-5 md:px-10 lg:px-20 xl:px-40 price" id="pricing">
     <div class="lg:block hidden price-image">
         <img src="../assets/images/mobile-prices.svg" alt="Mobile Price" class="mobile-1">
     </div>

@@ -2,7 +2,7 @@
     <!-- Slider Start -->
     <Slider />
     <!-- Slider End -->
-    <OurParner />
+    <OurPartner />
     <!-- Solution Start -->
     <Solution />
     <!-- Solution End -->
@@ -12,6 +12,7 @@
     <!-- Onboard Start -->
     <OnBoard />
     <!-- Onboard End -->
+    <Evolution />
     <!-- Testimal Start -->
     <Testimal />
     <!-- Testimal End -->
@@ -26,13 +27,14 @@
 <script setup lang="ts">
     import { onMounted } from 'vue';
     import Slider from '@/pages/Slider.vue';
-    import OurParner from './OurParner.vue';
+    import OurPartner from './OurPartner.vue';
     import Solution from '@/pages/Solution.vue';
     import Benefits from '@/pages/Benefits.vue';
     import OnBoard from '@/pages/OnBoard.vue';
     import Pregunta from '@/pages/Pregunta.vue';
     import Pricing from '@/pages/Pricing.vue';
     import Testimal from './Testimal.vue';
+    import Evolution from './Evolution.vue';
 
     import { gsap } from 'gsap';
     import { ScrollTrigger } from "gsap/ScrollTrigger";

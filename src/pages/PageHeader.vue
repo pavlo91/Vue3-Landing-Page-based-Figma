@@ -26,7 +26,7 @@
         if (scrollPosition.value > 10) {
         return 'px-4 py-4 flex lg:py-6 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 lg:px-20 xl:px-40 swin-header fixed z-40 overflow-hidden';
         } else {
-        return 'px-4 py-4 flex lg:py-6 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 swin-header lg:px-20 xl:px-40 overflow-hidden';
+        return 'px-4 py-4 flex lg:py-6 justify-between lg:justify-center lg:gap-20 items-center px-5 md:px-10 header-top lg:px-20 xl:px-40 overflow-hidden';
         }
     });
 
@@ -50,5 +50,9 @@
     .swin-header {
         width: 100%;
         background-color: black;
+    }
+    .header-top {
+        width: 100%;
+        background-color: transparent;
     }
 </style>

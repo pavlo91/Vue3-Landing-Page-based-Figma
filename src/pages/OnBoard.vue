@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
-    <img src="../assets/images/evolution.png" alt="Evolution">     
 </template>
 
 <script setup lang="ts">
@@ -39,6 +38,7 @@
     import TitleComponent from '@/components/TitleComponent.vue';
     import EffortItem from '@/components/EffortItem.vue';
     import ImageItem from '@/components/ImageItem.vue';
+    
 
     gsap.registerPlugin(ScrollTrigger)
     const onboard = gsap.timeline({ scrollTrigger: { trigger: '.effort-onboard', toggleActions: 'play pause restart reset' } })

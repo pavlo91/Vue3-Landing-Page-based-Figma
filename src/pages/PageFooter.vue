@@ -47,19 +47,19 @@
             </div>
         </div>
     </div>
-    <div class="grid lg:flex lg:justify-around grid-col px-4 md:px-20 lg:px-[152px] xl:px-40 mb-10 footer-color">
+    <div class="grid lg:flex lg:justify-around items-center grid-col px-4 md:px-20 lg:px-[152px] xl:px-40 mb-10 footer-color">
         <div class="text-center grid grid-col lg:flex lg:gap-4">
-            <a>Terms of Use</a>    
-            <a>Privacy Policy</a>    
-            <a>Cookie Policy</a>    
+            <a class="pb-6 lg:pb-0 underline ">Terms of Use</a>    
+            <a class="pb-6 lg:pb-0 underline">Privacy Policy</a>    
+            <a class="underline">Cookie Policy</a>    
         </div>
-        <div class="text-center lg:flex lg:gap-4">
+        <div class="text-center mt-10 lg:mt-0 lg:flex lg:gap-4">
             <p class="footer-color text-2xl lg:text-3xl font-semibold">Swin in</p>
-            <div class="flex gap-3 justify-center">
-                <img src="../assets/images/icon-facebook.svg" alt="">
-                <img src="../assets/images/icon-instagram.svg" alt="">
-                <img src="../assets/images/icon-youtube.svg" alt="">
-                <img src="../assets/images/icon-twitter.svg" alt="">
+            <div class="flex justify-center lg:-mt-2 ">
+                <img src="../assets/images/facebook.svg" alt="">
+                <img src="../assets/images/instagram.svg" alt="">
+                <img src="../assets/images/linkedin.svg" alt="">
+                <img src="../assets/images/social.svg" alt="">
             </div>
         </div>
     </div>

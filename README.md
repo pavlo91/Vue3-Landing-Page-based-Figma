@@ -1,9 +1,9 @@
 ## Screenshots
-![Home page](./screenshot-1.png?raw=true "Home page")
-![Custom page](./screenshot-2.png?raw=true "Slider page")
-![Cu page](./screenshot-3.png?raw=true "Custom page")
-![Cu page](./screenshot-4.png?raw=true "Pricing page")
-![Cu page](./screenshot-5.png?raw=true "Footer page")
+![Home page](./screenshot_1.png?raw=true "Home page")
+![Custom page](./screenshot_2.png?raw=true "Slider page")
+![Cu page](./screenshot_3.png?raw=true "Custom page")
+![Cu page](./screenshot_4.png?raw=true "Pricing page")
+![Cu page](./screenshot_5.png?raw=true "Footer page")
 <div align="center">
   <h1 align="center"!>Convert Figma to Vue3 + Typescript + Tailwind CSS</h1>
   <p align="center">

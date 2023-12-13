@@ -27,11 +27,6 @@
                 <img class="w-full mx-auto" src="src/assets/images/wrap-night.svg" alt="Eos nisi wisi at pereunt quas nisi">
             </div>
         </div>
-      <!-- <div class="image-list">
-          <div v-for="item in onboards" :key="item.id" class="px-4 lg:px-0 mb-5">
-            <ImageItem :url="item.imageUrl" class-name="lg:block hidden full-fit"/>
-          </div>
-      </div> -->
     </div>
     <img src="../assets/images/evolution.png" alt="Evolution">     
 </template>

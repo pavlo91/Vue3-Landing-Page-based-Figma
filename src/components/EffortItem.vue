@@ -2,8 +2,8 @@
   <div class="flex ml-0 gap-4 lg:gap-5 mb-6 effort-item">
     <img :src="props.eIconUrl" class="lg:block number h-fit"/>
     <div class="effort">
-        <h6 class="effort-color font-semibold text-2xl lg:text-2xl mb-2 lg:bg-inherit  ml-0">{{ props.effortTitle }}</h6>
-        <p class="effort-color ml-0 text-lg lg:text-lg font-normal">{{ props.effortDescription }}</p>
+        <h6 class="effort-color font-semibold text-xl lg:text-2xl mb-2 lg:bg-inherit  ml-0">{{ props.effortTitle }}</h6>
+        <p class="effort-color ml-0 text-sm lg:text-lg font-normal">{{ props.effortDescription }}</p>
     </div>
     <slot></slot>
   </div>
